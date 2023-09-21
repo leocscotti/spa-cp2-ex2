@@ -7,6 +7,7 @@ import EditarProdutos from './routes/EditarProdutos.jsx';
 import Erro404 from './routes/Erro404.jsx';
 import Produtos from './routes/Produtos.jsx';
 import ExcluirProduto from './routes/ExcluirProduto.jsx';
+import AdicionarProdutos from './routes/AdicionarProdutos.jsx';
 
 const router = createBrowserRouter([
   {path: '/', element: <App/>,
@@ -16,8 +17,10 @@ const router = createBrowserRouter([
       {path: '/produtos', element: <Produtos/>},
       {path: '/editar/produtos/:id', element: <EditarProdutos/>},
       {path: '/excluir/produtos/:id', element: <ExcluirProduto/>},
-    ]
-  }
+      
+    ],
+  },
+  {path: '/adicionar/produtos', element: <AdicionarProdutos/>},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

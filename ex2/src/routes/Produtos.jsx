@@ -4,6 +4,7 @@ import {GrFormEdit as Editar} from "react-icons/gr";
 import {RiDeleteBin2Fill as Excluir} from "react-icons/ri";
 import style from "./Produtos.module.css";
 import { useEffect, useState } from "react";
+import AdicionarProdutos from "./AdicionarProdutos";
 
 export default function Produtos() {
   document.title = "Produtos";
@@ -37,6 +38,9 @@ export default function Produtos() {
       </div>
       <div>
         <button onClick={()=> setCounter2(counter2 + 1)}>COUNTER2 - {counter2}</button>
+      </div>
+      <div>
+        <button><Link to={`/adicionar/produtos`}><AdicionarProdutos/>ADD</Link> </button>
       </div>
       <table className={style.tblEstilo}>
         <thead>
